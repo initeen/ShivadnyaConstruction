@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+</head>
+<body>
+	<section class="hero-banner">
+		<div id="carouselExampleSlidesOnly"
+			class="carousel slide carousel-fade" data-bs-ride="carousel"
+			data-bs-interval="4000">
+			<div class="carousel-inner">
+
+				<!-- Video Slide -->
+				<div class="carousel-item active">
+					<div class="banner-container">
+						<video autoplay muted loop playsinline class="banner-media">
+							<source src="./video/banner-video.mp4" type="video/mp4" />
+						</video>
+					</div>
+					<!-- Overlay content -->
+					<div
+						class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 text-center text-white">
+						<h1 class="fw-bold display-5 display-md-4 display-lg-3"
+							th:text="#{hero.title}">Quality Builds in Nashik</h1>
+						<p class="lead" th:text="#{hero.subtitle}">We deliver on time.</p>
+						<div class="d-flex flex-wrap gap-3 justify-content-center">
+							<a href="/services" class="btn btn-primary px-4">Explore
+								Services</a>
+							<button class="btn btn-outline-light px-4" data-bs-toggle="modal"
+								data-bs-target="#estimateModal">Get Estimation</button>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Multi-Step Estimation Modal -->
+				<!-- Multi-Step Compact Estimation Modal -->
+				<div class="modal fade" id="estimateModal" tabindex="-1"
+					aria-hidden="true">
+					<div class="modal-dialog compact-modal modal-dialog-centered">
+						<div class="modal-content">
+							<form id="multiStepForm">
+								<div class="modal-header">
+									<h5 class="modal-title" id="modalStepTitle">Step 1 of 7:
+										Type of Work</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+
+								<div class="modal-body">
+									<!-- Steps here (same as before, but now inside compact modal) -->
+									<!-- Example Step -->
+									<div class="form-step active">
+										<label for="workType" class="form-label">Type of Work</label>
+										<select class="form-select" id="workType" required>
+											<option selected disabled>Select</option>
+											<option>New Construction</option>
+											<option>Renovation</option>
+											<option>Commercial</option>
+											<option>Residential</option>
+										</select>
+									</div>
+
+									<!-- Step 2 -->
+									<div class="form-step">
+										<label for="area" class="form-label">What is the total
+											area (in sq ft)?</label> <input type="number" class="form-control"
+											id="area" required>
+									</div>
+
+									<!-- Step 3 -->
+									<div class="form-step">
+										<label for="material" class="form-label">Preferred
+											Material</label> <select class="form-select" id="material" required>
+											<option selected disabled>Select</option>
+											<option>Standard</option>
+											<option>Premium</option>
+											<option>Luxury</option>
+										</select>
+									</div>
+
+									<!-- Step 4 -->
+									<div class="form-step">
+										<label for="quality" class="form-label">Construction
+											Quality</label> <select class="form-select" id="quality" required>
+											<option selected disabled>Select</option>
+											<option>Basic</option>
+											<option>Medium</option>
+											<option>High-end</option>
+										</select>
+									</div>
+
+									<!-- Step 5 -->
+									<div class="form-step">
+										<label for="duration" class="form-label">Expected
+											Completion Time (months)</label> <input type="number"
+											class="form-control" id="duration" required>
+									</div>
+
+									<!-- Step 6 -->
+									<div class="form-step">
+										<label for="email" class="form-label">Your Email</label> <input
+											type="email" class="form-control" id="email" required>
+									</div>
+
+									<!-- Step 7 -->
+									<div class="form-step">
+										<label for="notes" class="form-label">Additional Info</label>
+										<textarea class="form-control" id="notes" rows="3"></textarea>
+									</div>
+								</div>
+								<!-- ... Other steps same as before ... -->
+
+								<div class="modal-footer d-flex justify-content-end gap-2">
+									<button type="button" class="btn btn-secondary" id="prevBtn"
+										disabled>Back</button>
+									<button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+									<button type="submit" class="btn btn-success d-none"
+										id="submitBtn">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<script>
+  const steps = document.querySelectorAll(".form-step");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const submitBtn = document.getElementById("submitBtn");
+  const stepTitle = document.getElementById("modalStepTitle");
+
+  let currentStep = 0;
+
+  function showStep(index) {
+    steps.forEach((step, i) => {
+      step.classList.toggle("active", i === index);
+    });
+
+    stepTitle.innerText = `Step ${index + 1} of ${steps.length}: ${getStepTitle(index)}`;
+
+    prevBtn.disabled = index === 0;
+    nextBtn.classList.toggle("d-none", index === steps.length - 1);
+    submitBtn.classList.toggle("d-none", index !== steps.length - 1);
+  }
+
+  function getStepTitle(index) {
+    const titles = [
+      "Type of Work",
+      "Area (sq ft)",
+      "Material Preference",
+      "Construction Quality",
+      "Timeline",
+      "Email",
+      "Additional Info"
+    ];
+    return titles[index] || "";
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+
+  // Form submit
+  document.getElementById("multiStepForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Get values (optional - for sending to backend or showing estimate)
+    const data = {
+      workType: document.getElementById("workType").value,
+      area: document.getElementById("area").value,
+      material: document.getElementById("material").value,
+      quality: document.getElementById("quality").value,
+      duration: document.getElementById("duration").value,
+      email: document.getElementById("email").value,
+      notes: document.getElementById("notes").value
+    };
+
+    console.log("Estimation Data:", data);
+
+    alert("✅ Thank you! Your estimation request has been submitted. We’ll contact you via email soon.");
+
+    const modal = bootstrap.Modal.getInstance(document.getElementById('estimateModal'));
+    modal.hide();
+    this.reset();
+    currentStep = 0;
+    showStep(currentStep);
+  });
+
+  // Initial show
+  showStep(currentStep);
+</script>
+
+
+				<!-- Image Slide 1 -->
+				<div class="carousel-item">
+					<div class="banner-container">
+						<img
+							src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80"
+							class="banner-media" alt="Banner Image">
+					</div>
+				</div>
+
+				<!-- Image Slide 2 -->
+				<div class="carousel-item">
+					<div class="banner-container">
+						<img src="./img/aprt.jpg" class="banner-media" alt="Flats">
+					</div>
+				</div>
+
+				<!-- Image Slide 3 -->
+				<div class="carousel-item">
+					<div class="banner-container">
+						<img src="./img/rhc.jpg" class="banner-media" alt="Row Houses">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Services Section -->
+	<section class="py-5">
+		<div class="container">
+			<div class="section-header text-center mb-5">
+				<h2 class="section-title">Our Services</h2>
+				<p class="section-subtitle">We deliver quality across
+					residential and commercial spaces</p>
+			</div>
+
+			<div class="row row-cols-1 row-cols-md-3 g-4">
+				<!-- Card 1 -->
+				<div class="col">
+					<div class="card h-100 card-hover shadow-sm">
+						<div class="card-img-wrapper">
+							<img src="./img/rh.webp" class="card-img-top" alt="Row Houses">
+						</div>
+						<div class="card-body text-center">
+							<h5 class="card-title" th:text="#{services.rowhouses}">Row
+								Houses</h5>
+							<p class="card-text">Premium row houses with smart layouts.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="col">
+					<div class="card h-100 card-hover shadow-sm">
+						<div class="card-img-wrapper">
+							<img src="./img/aprt.jpg" class="card-img-top" alt="Flats">
+						</div>
+						<div class="card-body text-center">
+							<h5 class="card-title" th:text="#{services.flats}">Flats</h5>
+							<p class="card-text">Airy apartments designed for comfort.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="col">
+					<div class="card h-100 card-hover shadow-sm">
+						<div class="card-img-wrapper">
+							<img src="./img/cb.jpg" class="card-img-top" alt="Commercial">
+						</div>
+						<div class="card-body text-center">
+							<h5 class="card-title" th:text="#{services.commercial}">Commercial</h5>
+							<p class="card-text">Modern commercial spaces in prime areas.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>About Us</title>
+</head>
+<body>
+
+	<!-- About Section -->
+	<section class="container py-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center mb-4">
+				<h1 th:text="#{about.title}">About Us</h1>
+				<p class="lead" th:text="#{about.body}">Shivadnya Construction
+					is committed to building high-quality homes, apartments, and
+					commercial properties tailored to modern lifestyles.</p>
+			</div>
+		</div>
+
+		<div class="row text-center mb-5">
+			<div class="col-12 col-sm-6 col-md-4 d-flex mb-4">
+				<div
+					class="p-4 shadow-sm rounded bg-body-tertiary w-100 d-flex flex-column justify-content-between">
+					<i class="fa-solid fa-bullseye fa-2x text-primary mb-3"></i>
+					<h4>Our Mission</h4>
+					<p>To construct durable, innovative, and sustainable structures
+						that meet the needs of modern living.</p>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-6 col-md-4 d-flex mb-4">
+				<div
+					class="p-4 shadow-sm rounded bg-body-tertiary w-100 d-flex flex-column justify-content-between">
+					<i class="fa-solid fa-eye fa-2x text-success mb-3"></i>
+					<h4>Our Vision</h4>
+					<p>To be a trusted name in construction, known for integrity,
+						quality, and timely delivery of projects.</p>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-6 col-md-4 d-flex mb-4">
+				<div
+					class="p-4 shadow-sm rounded bg-body-tertiary w-100 d-flex flex-column justify-content-between">
+					<i class="fa-solid fa-handshake fa-2x text-warning mb-3"></i>
+					<h4>Our Values</h4>
+					<p>Transparency, commitment to excellence, customer
+						satisfaction, and safety.</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Image and Story -->
+		<div class="row align-items-center mb-5">
+			<div class="col-md-6">
+				<img src="/img/office.jpg" alt="Company Office"
+					class="img-fluid rounded shadow-sm">
+			</div>
+			<div class="col-md-6">
+				<h3 class="mb-3">Who We Are</h3>
+				<p>With over a decade of experience, Shivadnya Construction has
+					delivered numerous successful residential and commercial projects
+					across the region. Our skilled team of engineers, architects, and
+					designers work hand-in-hand to bring your vision to life.</p>
+				<p>We prioritize customer satisfaction, timely completion, and
+					long-lasting relationships built on trust and quality
+					craftsmanship.</p>
+			</div>
+		</div>
+
+		<!-- Achievements -->
+		<div class="row text-center">
+			<div class="col-md-3">
+				<h2 class="text-primary">50+</h2>
+				<p>Projects Completed</p>
+			</div>
+			<div class="col-md-3">
+				<h2 class="text-success">10+</h2>
+				<p>Years of Experience</p>
+			</div>
+			<div class="col-md-3">
+				<h2 class="text-warning">500+</h2>
+				<p>Happy Clients</p>
+			</div>
+			<div class="col-md-3">
+				<h2 class="text-info">100%</h2>
+				<p>Client Satisfaction</p>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

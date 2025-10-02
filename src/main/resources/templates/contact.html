@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Contact</title>
+</head>
+<body>
+
+	<section class="container py-5">
+
+		<!-- Page Header -->
+		<div class="contact-header text-center mb-4">
+			<h1 th:text="#{contact.title}">Contact Us</h1>
+			<p class="text-secondary" th:text="#{contact.subtitle}">We’d love
+				to hear from you! Reach out to us via form, phone, or visit our
+				office.</p>
+		</div>
+
+		<div class="row g-4">
+
+			<!-- Contact Form -->
+			<div class="col-md-7">
+				<form id="contactForm" class="needs-validation" novalidate>
+					<div class="mb-3">
+						<label class="form-label"> <span th:text="#{contact.name}">Full
+								Name</span> <span class="text-danger">*</span>
+						</label> <input type="text" name="name" class="form-control" required>
+						<div class="invalid-feedback">Please enter your full name.</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							<label class="form-label"> <span
+								th:text="#{contact.email}">Email</span> <span
+								class="text-danger">*</span>
+							</label> <input type="email" name="email" class="form-control" required>
+							<div class="invalid-feedback">Please enter a valid email
+								address.</div>
+						</div>
+
+						<div class="col-md-6 mb-3">
+							<label class="form-label"> <span
+								th:text="#{contact.phone}">Phone</span> <span
+								class="text-danger">*</span>
+							</label> <input type="text" name="phone" class="form-control" required
+								pattern="[0-9]{10}">
+							<div class="invalid-feedback">Please enter a valid 10-digit
+								phone number.</div>
+						</div>
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label" th:text="#{contact.subject}">Subject</label>
+						<input type="text" name="subject" class="form-control">
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label" th:text="#{contact.preferred}">Preferred
+							Time</label> <input type="text" name="preferredContactTime"
+							class="form-control" placeholder="e.g. 11am–2pm">
+					</div>
+
+					<div class="mb-3">
+						<label class="form-label"> <span
+							th:text="#{contact.message}">Message</span> <span
+							class="text-danger">*</span>
+						</label>
+						<textarea name="message" class="form-control" rows="5" required></textarea>
+						<div class="invalid-feedback">Please enter your message.</div>
+					</div>
+
+					<button class="btn btn-primary" type="submit"
+						th:text="#{contact.send}">Send Inquiry</button>
+				</form>
+
+
+				<div id="contactAlert" class="alert mt-3 d-none" role="alert"></div>
+			</div>
+
+			<!-- Contact Info & Map -->
+			<div class="col-md-5">
+				<div
+					class="p-4 rounded-3 h-100 contact-info shadow-sm d-flex flex-column">
+
+					<!-- Logo + Company Name -->
+					<div class="d-flex align-items-center mb-3">
+						<img src="/img/image.png" alt="Logo" class="me-3"
+							style="width: 60px; height: auto;">
+						<h5 class="mb-0" th:text="#{site.brand.full}">Shivaaddhnya
+							Construction</h5>
+					</div>
+
+					<!-- Contact Details -->
+					<div class="mb-3">
+						<p class="mb-2">
+							<i class="fa-solid fa-location-dot"></i> Nashik, Maharashtra
+						</p>
+						<p class="mb-2">
+							<i class="fa-solid fa-phone"></i> +91-9604250995
+						</p>
+						<p class="mb-2">
+							<i class="fa-solid fa-envelope"></i> qwerty@gmail.com
+						</p>
+					</div>
+
+					<!-- Map Embed -->
+					<div class="map-container mt-1">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30268.59377720669!2d73.743422!3d19.997454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeba36a3383a9%3A0xa1ee66f62e41f5f!2sNashik%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1705678900000"
+							width="100%" height="200" style="border: 0;" allowfullscreen=""
+							loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+</body>
+</html>

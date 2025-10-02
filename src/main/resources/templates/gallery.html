@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Gallery</title>
+</head>
+<body>
+
+	<section class="container py-5">
+		<!-- Page Header -->
+		<div class="text-center mb-4">
+			<h1 th:text="#{gallery.title}">Gallery..</h1>
+			<p class="text-secondary">Explore some of our featured
+				residential and commercial projects in Nashik.</p>
+		</div>
+
+		<!-- Gallery Grid -->
+		<div class="row row-cols-2 row-cols-md-4 g-3 mt-1">
+			<div class="col">
+				<img class="img-fluid rounded-3 shadow-sm gallery-img"
+					src="/img/cb.jpg" alt="Row House" data-bs-toggle="modal"
+					data-bs-target="#galleryModal"
+					onclick="changeModalImage('/img/cb.jpg')">
+			</div>
+			<div class="col">
+				<img class="img-fluid rounded-3 shadow-sm gallery-img"
+					src="/img/rhc.jpg" alt="Apartment" data-bs-toggle="modal"
+					data-bs-target="#galleryModal"
+					onclick="changeModalImage('/img/rhc.jpg')">
+			</div>
+			<div class="col">
+				<img class="img-fluid rounded-3 shadow-sm gallery-img"
+					src="/img/cb.jpg" alt="Hero 1" data-bs-toggle="modal"
+					data-bs-target="#galleryModal"
+					onclick="changeModalImage('/img/cb.jpg')">
+			</div>
+			<div class="col">
+				<img class="img-fluid rounded-3 shadow-sm gallery-img"
+					src="/img/rhc.jpg" alt="Hero 2" data-bs-toggle="modal"
+					data-bs-target="#galleryModal"
+					onclick="changeModalImage('/img/rhc.jpg')">
+			</div>
+		</div>
+	</section>
+	<section></section>
+	<section>
+
+		<!-- Modal (Lightbox) -->
+		<div class="modal fade" id="galleryModal" tabindex="-1"
+			aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content bg-dark">
+					<div class="modal-body p-0 text-center">
+						<img id="modalImage" src="" class="img-fluid rounded"
+							alt="Preview">
+					</div>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn btn-light btn-sm"
+							data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
