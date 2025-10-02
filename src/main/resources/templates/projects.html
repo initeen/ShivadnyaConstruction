@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Projects</title>
+</head>
+<body>
+
+	<section class="container py-5">
+
+		<!-- Hero Section -->
+		<div class="hero text-center mb-4">
+			<h1 th:text="#{projects.title}">Featured Projects..</h1>
+			<p class="lead" th:text="#{projects.subtitle}">Explore our
+				premium residential & commercial projects across Nashik.</p>
+		</div>
+
+		<!-- Projects Grid -->
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+
+			<!-- Project 1 -->
+			<div class="col">
+				<div class="card h-100">
+					<img src="/img/rh.webp" class="card-img-top" alt="Row House Scheme">
+					<div class="card-body">
+						<h5 class="card-title">Row House Scheme — Gangapur Road</h5>
+						<p class="card-text">Premium 3 BHK row houses with parking &
+							private garden.</p>
+						<ul class="amenities">
+							<li>Size: 1500+ sq.ft</li>
+							<li>Price: Starting ₹75 Lakhs</li>
+							<li>Location: Near Wine Park</li>
+						</ul>
+						<a href="#" class="btn btn-primary btn-sm mt-2"
+							data-bs-toggle="modal" data-bs-target="#project1Modal">View
+							Details</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Project 2 -->
+			<div class="col">
+				<div class="card h-100">
+					<img src="/img/apt.webp" class="card-img-top"
+						alt="Apartment College Road">
+					<div class="card-body">
+						<h5 class="card-title">Apartment — College Road</h5>
+						<p class="card-text">Modern 2 & 3 BHK airy apartments with
+							lift & parking.</p>
+						<ul class="amenities">
+							<li>Size: 950 – 1450 sq.ft</li>
+							<li>Price: From ₹55 Lakhs</li>
+							<li>Location: Prime College Road</li>
+						</ul>
+						<a href="#" class="btn btn-primary btn-sm mt-2"
+							data-bs-toggle="modal" data-bs-target="#project2Modal">View
+							Details</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Project 3 -->
+			<div class="col">
+				<div class="card h-100">
+					<img src="/img/cb.jpg" class="card-img-top" alt="Commercial Satpur">
+					<div class="card-body">
+						<h5 class="card-title">Commercial Complex — Satpur</h5>
+						<p class="card-text">Showrooms & offices with ample frontage &
+							visibility.</p>
+						<ul class="amenities">
+							<li>Sizes: 500 – 5000 sq.ft</li>
+							<li>Price: On Request</li>
+							<li>Location: Satpur MIDC</li>
+						</ul>
+						<a href="#" class="btn btn-primary btn-sm mt-2"
+							data-bs-toggle="modal" data-bs-target="#project3Modal">View
+							Details</a>
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</section>
+
+	<section>
+		<!-- MODALS -->
+
+		<!-- Project 1 Modal -->
+		<div class="modal fade" id="project1Modal" tabindex="-1"
+			aria-labelledby="project1Label" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="project1Label">Row House Scheme —
+							Gangapur Road</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<img src="/img/rhc.jpg" class="img-fluid rounded mb-3"
+							alt="Row House">
+						<p>Premium 3 BHK row houses designed for modern families with
+							private gardens and covered parking.</p>
+						<ul>
+							<li>Spacious layouts with natural lighting</li>
+							<li>Clubhouse & landscaped garden</li>
+							<li>24/7 security & gated community</li>
+						</ul>
+						<p>
+							<strong>Price:</strong> Starting ₹75 Lakhs
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Project 2 Modal -->
+		<div class="modal fade" id="project2Modal" tabindex="-1"
+			aria-labelledby="project2Label" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="project2Label">Apartment —
+							College Road</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<img src="/img/aprt.jpg" class="img-fluid rounded mb-3"
+							alt="Apartment">
+						<p>Elegant apartments in Nashik’s prime location with modern
+							amenities.</p>
+						<ul>
+							<li>Lift & covered parking</li>
+							<li>Power backup & intercom facility</li>
+							<li>Children’s play area</li>
+						</ul>
+						<p>
+							<strong>Price:</strong> From ₹55 Lakhs
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Project 3 Modal -->
+		<div class="modal fade" id="project3Modal" tabindex="-1"
+			aria-labelledby="project3Label" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="project3Label">Commercial Complex
+							— Satpur</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<img src="/img/cb.jpg" class="img-fluid rounded mb-3"
+							alt="Commercial Complex">
+						<p>Perfect for showrooms, offices, and startups looking for
+							visibility and accessibility.</p>
+						<ul>
+							<li>Prime commercial location in Satpur MIDC</li>
+							<li>Ample frontage for branding</li>
+							<li>Basement + open parking</li>
+						</ul>
+						<p>
+							<strong>Price:</strong> On Request
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+</body>
+</html>

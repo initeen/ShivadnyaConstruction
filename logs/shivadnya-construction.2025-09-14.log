@@ -1,0 +1,82 @@
+2025-09-14 11:24:49 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-14 11:24:49 [main] INFO  c.s.ShivadnyaConstructionApplicationTests - Starting ShivadnyaConstructionApplicationTests using Java 17.0.10 with PID 2884 (started by Niteen in C:\Users\Niteen\OneDrive\Documents\September Batch\Java\Advance java\Eclipse IDE\Spring Boot\ShivadnyaConstruction)
+2025-09-14 11:24:49 [main] DEBUG c.s.ShivadnyaConstructionApplicationTests - Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-14 11:24:49 [main] INFO  c.s.ShivadnyaConstructionApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 11:24:51 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-09-14 11:24:51 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2025-09-14 11:24:51 [main] INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-09-14 11:24:51 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v2.5.0 created.
+2025-09-14 11:24:51 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2025-09-14 11:24:51 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.5.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2025-09-14 11:24:51 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-09-14 11:24:51 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.5.0
+2025-09-14 11:24:51 [main] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5a4d4f9c
+2025-09-14 11:24:51 [main] INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2025-09-14 11:24:51 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-09-14 11:24:51 [main] INFO  c.s.ShivadnyaConstructionApplicationTests - Started ShivadnyaConstructionApplicationTests in 3.025 seconds (process running for 4.274)
+2025-09-14 11:24:52 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2025-09-14 11:24:52 [SpringApplicationShutdownHook] INFO  o.s.s.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2025-09-14 11:24:52 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2025-09-14 11:24:52 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2025-09-14 11:24:52 [SpringApplicationShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2025-09-14 11:25:48 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-09-14 11:25:48 [restartedMain] INFO  c.s.ShivadnyaConstructionApplication - Starting ShivadnyaConstructionApplication using Java 17.0.10 with PID 20232 (C:\Users\Niteen\OneDrive\Documents\September Batch\Java\Advance java\Eclipse IDE\Spring Boot\ShivadnyaConstruction\target\classes started by Niteen in C:\Users\Niteen\OneDrive\Documents\September Batch\Java\Advance java\Eclipse IDE\Spring Boot\ShivadnyaConstruction)
+2025-09-14 11:25:48 [restartedMain] DEBUG c.s.ShivadnyaConstructionApplication - Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-14 11:25:48 [restartedMain] INFO  c.s.ShivadnyaConstructionApplication - No active profile set, falling back to 1 default profile: "default"
+2025-09-14 11:25:48 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-09-14 11:25:48 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-09-14 11:25:49 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-09-14 11:25:49 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-14 11:25:49 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-09-14 11:25:49 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-14 11:25:49 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-09-14 11:25:49 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1001 ms
+2025-09-14 11:25:49 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2025-09-14 11:25:50 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2025-09-14 11:25:50 [restartedMain] INFO  o.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2025-09-14 11:25:50 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v2.5.0 created.
+2025-09-14 11:25:50 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2025-09-14 11:25:50 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.5.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2025-09-14 11:25:50 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2025-09-14 11:25:50 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.5.0
+2025-09-14 11:25:50 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@23e20060
+2025-09-14 11:25:50 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-09-14 11:25:50 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-09-14 11:25:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-09-14 11:25:50 [restartedMain] INFO  o.s.s.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2025-09-14 11:25:50 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2025-09-14 11:25:50 [restartedMain] INFO  c.s.ShivadnyaConstructionApplication - Started ShivadnyaConstructionApplication in 1.873 seconds (process running for 2.232)
+2025-09-14 11:25:50 [restartedMain] INFO  c.s.ShivadnyaConstructionApplication - ShivadnyaConstructionApplication.main()
+2025-09-14 11:26:59 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-14 11:26:59 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-14 11:26:59 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-09-14 11:27:00 [http-nio-8080-exec-1] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-1][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 11:27:43 [http-nio-8080-exec-2] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-2][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 11:27:49 [http-nio-8080-exec-10] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 11:28:10 [http-nio-8080-exec-1] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-1][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 11:28:17 [http-nio-8080-exec-1] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-1][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 11:28:55 [http-nio-8080-exec-10] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 11:29:05 [http-nio-8080-exec-2] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-2][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 11:29:15 [http-nio-8080-exec-3] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-3][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 11:29:27 [http-nio-8080-exec-3] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-3][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 17:27:33 [http-nio-8080-exec-3] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-3][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 17:28:03 [http-nio-8080-exec-10] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][about] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template about, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 17:28:06 [http-nio-8080-exec-6] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-6][services] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template services, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 17:28:10 [http-nio-8080-exec-7] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-7][gallery] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template gallery, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 17:28:19 [http-nio-8080-exec-10] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-10][contact] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template contact, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 17:28:35 [http-nio-8080-exec-4] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-4][about] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template about, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.
+2025-09-14 17:28:41 [http-nio-8080-exec-6] WARN  o.t.s.p.AbstractStandardFragmentInsertionTagProcessor - [THYMELEAF][http-nio-8080-exec-6][index] Deprecated unwrapped fragment expression "layout::layout(~{::section})" found in template index, line 3, col 2. Please use the complete syntax of fragment expressions instead ("~{layout::layout(~{::section})}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.

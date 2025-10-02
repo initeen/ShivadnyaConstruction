@@ -1,0 +1,233 @@
+/* Base Layout */
+body {
+	min-height: 100dvh;
+}
+
+/* WhatsApp Button */
+#whatsappBtn {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	width: 46px;
+	height: 46px;
+	background-color: #25D366;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 1000;
+}
+
+#whatsappBtn:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+#whatsappBtn i {
+	color: white;
+	font-size: 28px;
+}
+
+/* Back to Top Button */
+#backToTop {
+	position: fixed;
+	right: 20px;
+	bottom: 86px;
+	width: 46px;
+	height: 46px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Theme Switch - Logo Handling */
+.d-dark {
+	display: none;
+}
+
+[data-bs-theme="dark"] .d-dark {
+	display: inline-block !important;
+}
+
+[data-bs-theme="dark"] .d-light {
+	display: none !important;
+}
+
+/* Carousel Caption */
+.carousel-caption {
+	/*  background: rgba(0, 0, 0, 0.35); */
+	backdrop-filter: saturate(120%) blur(2px);
+	border-radius: 1rem;
+}
+
+/* Gradient Title Text */
+.gradient-text {
+	background: linear-gradient(90deg, #ff7e5f, #feb47b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	font-weight: bold;
+}
+
+/* Navigation Links */
+.navbar-nav .nav-link {
+	color: var(--dark-color);
+	font-weight: 500;
+	margin: 0 10px;
+	transition: color 0.3s ease;
+}
+
+/* Hover Effect - Light Mode */
+.navbar-nav .nav-link:hover {
+	color: #ff7e5f; /* Coral (from gradient) */
+}
+
+/* Hover Effect - Dark Mode */
+[data-bs-theme="dark"] .navbar-nav .nav-link:hover {
+	color: #feb47b; /* Lighter coral/apricot */
+}
+
+/* Active State */
+.navbar-nav .nav-link.active {
+	color: #ff7e5f;
+	font-weight: bold;
+}
+
+/* Active State - Dark Mode */
+[data-bs-theme="dark"] .navbar-nav .nav-link.active {
+	color: #feb47b;
+}
+
+/* === Social Media Button Colors === */
+.btn-facebook {
+	background-color: #3b5998;
+}
+
+.btn-twitter {
+	background-color: #55acee;
+}
+
+.btn-google {
+	background-color: #dd4b39;
+}
+
+.btn-instagram {
+	background-color: #ac2bac;
+}
+
+/* Optional: Add hover effects */
+.btn-facebook:hover {
+	background-color: #2d4373;
+}
+
+.btn-twitter:hover {
+	background-color: #2795e9;
+}
+
+.btn-google:hover {
+	background-color: #c23321;
+}
+
+.btn-instagram:hover {
+	background-color: #8e1c8c;
+}
+
+.compact-modal {
+	max-width: 500px;
+}
+
+@media ( max-width : 576px) {
+	.compact-modal {
+		max-width: 90vw;
+		margin: auto;
+	}
+}
+
+.form-step {
+	display: none;
+}
+
+.form-step.active {
+	display: block;
+}
+
+.carousel-caption::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	border-radius: 0.5rem;
+}
+
+    .card:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .amenities {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    
+ .gallery-img {
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    
+    .contact-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .contact-info p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+    }
+    .contact-info i {
+      color: #0d6efd;
+      margin-right: 8px;
+    }
+    .map-container {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    #modalImage {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+#modalImage.show {
+  opacity: 1;
+}
+
+  .transition {
+    transition: all 0.3s ease;
+  }
+
+  #themeToggle.active {
+    background-color: #0d6efd;
+    color: #fff;
+  }
+
+  #langToggleBtn.active {
+    background-color: #198754;
+    color: #fff;
+  }
+
+  #themeToggle i, #langToggleBtn i {
+    transition: transform 0.3s;
+  }
+
+ .form-label .text-danger {
+    margin-left: 4px;
+    font-weight: bold;
+  }
+    

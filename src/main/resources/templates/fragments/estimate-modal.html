@@ -1,0 +1,128 @@
+<!-- fragments/estimate-modal.html -->
+<div class="modal fade" id="estimateModal" tabindex="-1" aria-labelledby="estimateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <form id="estimationForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="estimateModalLabel">Construction Estimate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <!-- Step 1 -->
+          <div class="step" id="step1">
+            <div class="mb-3">
+              <label for="workType" class="form-label">Type of Work</label>
+              <select class="form-select" id="workType" required>
+                <option disabled selected>Select</option>
+                <option>New Construction</option>
+                <option>Renovation</option>
+                <option>Commercial</option>
+                <option>Residential</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step d-none" id="step2">
+            <div class="mb-3">
+              <label for="area" class="form-label">Total Area (in sq ft)</label>
+              <input type="number" class="form-control" id="area" required>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step d-none" id="step3">
+            <div class="mb-3">
+              <label for="material" class="form-label">Preferred Material</label>
+              <select class="form-select" id="material" required>
+                <option disabled selected>Select</option>
+                <option>Standard</option>
+                <option>Premium</option>
+                <option>Luxury</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step d-none" id="step4">
+            <div class="mb-3">
+              <label for="quality" class="form-label">Construction Quality</label>
+              <select class="form-select" id="quality" required>
+                <option disabled selected>Select</option>
+                <option>Basic</option>
+                <option>Medium</option>
+                <option>High-end</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step d-none" id="step5">
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="notes" class="form-label">Additional Info</label>
+              <textarea class="form-control" id="notes" rows="3"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer justify-content-end">
+          <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Back</button>
+          <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+          <button type="submit" class="btn btn-success d-none" id="submitBtn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+// Multi-step modal logic
+let currentStep = 0;
+const steps = document.querySelectorAll('.step');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const submitBtn = document.getElementById('submitBtn');
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.classList.toggle('d-none', i !== index);
+  });
+  prevBtn.disabled = index === 0;
+  nextBtn.classList.toggle('d-none', index === steps.length - 1);
+  submitBtn.classList.toggle('d-none', index !== steps.length - 1);
+}
+
+nextBtn.addEventListener('click', () => {
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    showStep(currentStep);
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentStep > 0) {
+    currentStep--;
+    showStep(currentStep);
+  }
+});
+
+document.getElementById('estimationForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Estimate submitted! (Backend logic goes here)');
+  // Reset modal
+  currentStep = 0;
+  showStep(currentStep);
+  const modal = bootstrap.Modal.getInstance(document.getElementById('estimateModal'));
+  modal.hide();
+});
+
+document.getElementById('estimateModal').addEventListener('shown.bs.modal', function () {
+  currentStep = 0;
+  showStep(currentStep);
+});
+</script>

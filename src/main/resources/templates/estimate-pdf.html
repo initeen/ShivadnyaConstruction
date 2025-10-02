@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Estimate</title>
+    <style>
+        body { font-family: Arial, sans-serif; font-size: 12px; }
+        .header { text-align: center; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+        th, td { border: 1px solid #ccc; padding: 6px; text-align: left; }
+        .total { font-weight: bold; font-size: 14px; }
+    </style>
+</head>
+<body>
+<div class="header">
+    <!-- ✅ base64 logo -->
+    <img th:if="${logoDataUri}" th:src="${logoDataUri}" alt="Logo" style="height:80px;"/><br/>
+    <h2>Shivadnya Construction Estimate</h2>
+    <p th:text="'Generated: ' + ${generatedAt}"></p>
+</div>
+
+<h3>Client Info</h3>
+<p><b>Name:</b> <span th:text="${req.name}"></span><br/>
+<b>Email:</b> <span th:text="${req.email}"></span><br/>
+<b>Phone:</b> <span th:text="${req.phone}"></span></p>
+
+<h3>Project Details</h3>
+<ul>
+    <li>City/Area: <span th:text="${req.cityArea}"></span></li>
+    <li>Plot Range: <span th:text="${req.plotRange}"></span></li>
+    <li>Slab Range: <span th:text="${req.slabRange}"></span></li>
+    <li>Floors: <span th:text="${req.floors}"></span></li>
+    <li>Work Type: <span th:text="${req.workType}"></span></li>
+    <li>Material: <span th:text="${req.material}"></span></li>
+    <li>Quality: <span th:text="${req.quality}"></span></li>
+</ul>
+
+<h3>Breakdown</h3>
+<table>
+    <tr><th>Item</th><th>Cost (₹)</th></tr>
+    <tr><td>Structure</td><td th:text="${#numbers.formatDecimal(breakdown.structure, 0, 'COMMA', 0, 'POINT')}"></td></tr>
+    <tr><td>Doors</td><td th:text="${breakdown.doorsCost}"></td></tr>
+    <tr><td>Windows</td><td th:text="${breakdown.windowsCost}"></td></tr>
+    <tr><td>Paint</td><td th:text="${breakdown.paintCost}"></td></tr>
+    <tr><td>Putty</td><td th:text="${breakdown.puttyCost}"></td></tr>
+    <tr><td>Cement</td><td th:text="${breakdown.cementCost}"></td></tr>
+    <tr><td>Steel</td><td th:text="${breakdown.steelCost}"></td></tr>
+    <tr><td>Bricks</td><td th:text="${breakdown.bricksCost}"></td></tr>
+    <tr><td>Labour</td><td th:text="${breakdown.labour}"></td></tr>
+    <tr><td>Mandatory Fees</td><td th:text="${breakdown.mandatoryFees}"></td></tr>
+    <tr><td>Contingency</td><td th:text="${breakdown.contingency}"></td></tr>
+    <tr><td>Admin</td><td th:text="${breakdown.admin}"></td></tr>
+    <tr class="total"><td>Total</td><td th:text="${breakdown.total}"></td></tr>
+</table>
+
+<p><i>Note: This is an approximate estimate. Actual cost may vary.</i></p>
+</body>
+</html>

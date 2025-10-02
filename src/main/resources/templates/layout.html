@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(section)">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="wa-phone" content="919604250995" />
+<link rel="icon" href="/img/fevicon.png" type="image/x-icon">
+<title th:text="#{site.brand.full}">Shivadnya Construction</title>
+<link rel="stylesheet"
+	href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/webjars/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-bs-theme="light">
+	<!-- Title&Navbar  -->
+	<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow-sm">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+      <img src="/img/image.png" alt="logo" height="50" class="d-light d-inline-block">
+      <img src="/img/image.png" alt="logo" height="28" class="d-dark d-none">
+      <strong class="gradient-text" th:text="#{site.brand}">Shivadnya Construction</strong>
+    </a>
+
+    <!-- Toggler (Mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars"
+      aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Content -->
+    <div class="collapse navbar-collapse justify-content-between" id="navbars">
+
+      <!-- Nav Links -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center text-lg-start">
+        <li class="nav-item">
+          <a class="nav-link" href="/" th:text="#{nav.home}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about" th:text="#{nav.about}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/services" th:text="#{nav.services}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/projects" th:text="#{nav.projects}">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/gallery" th:text="#{nav.gallery}">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact" th:text="#{nav.contact}">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Theme & Language Toggle -->
+      <div class="d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0">
+        <div class="d-inline-flex rounded-pill border overflow-hidden align-items-center"
+          style="border: 1px solid #ced4da; background-color: #f8f9fa;">
+          <!-- Theme Toggle -->
+          <button id="themeToggle" class="btn btn-sm d-flex align-items-center px-3 transition" style="border: none;">
+            <i class="fa-solid fa-moon me-1"></i>
+            <span id="themeLabel">Dark</span>
+          </button>
+
+          <!-- Language Toggle -->
+          <button id="langToggleBtn" class="btn btn-sm d-flex align-items-center px-3 transition"
+            style="border: none; border-left: 1px solid #ced4da;">
+            <span id="langLabel">EN</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+	
+	<!-- End Title&Navbar  -->
+
+	<!-- Body -->
+	<main>
+		<div th:replace="${section}"></div>
+	</main>
+	<!-- End Body -->
+
+	<!-- Footer -->
+	<footer class="bg-body-tertiary text-center">
+		<div class="container p-2 pb-2">
+			<section class="mb-1">
+				<!-- Facebook -->
+				<a class="btn btn-facebook text-white rounded-circle" href="#!"
+					role="button"> <i class="fab fa-facebook-f"></i>
+				</a>
+				<!-- Twitter -->
+				<a class="btn btn-twitter text-white rounded-circle m-1" href="#!"
+					role="button"> <i class="fab fa-twitter"></i>
+				</a>
+				<!-- Google -->
+				<a class="btn btn-google text-white rounded-circle m-1" href="#!"
+					role="button"> <i class="fab fa-google"></i>
+				</a>
+				<!-- Instagram -->
+				<a class="btn btn-instagram text-white rounded-circle m-1" href="#!"
+					role="button"> <i class="fab fa-instagram"></i>
+				</a>
+			</section>
+			<p>
+				© 2025 Copyright: <a class="text-body" href="/">shivadnyaconstruction.com</a>
+			</p>
+			<p>Developed by initeen.solutions</p>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+	<!-- Floating WhatsApp & Back-to-Top -->
+	<a id="whatsappBtn"
+		class="btn btn-success btn-lg rounded-circle shadow"
+		href="https://wa.me/919604250995" target="_blank" title="WhatsApp">
+		<i class="fab fa-whatsapp"></i>
+	</a>
+	<button id="backToTop"
+		class="btn btn-primary rounded-circle shadow d-none" title="Top">
+		<i class="fa-solid fa-arrow-up"></i>
+	</button>
+	<!-- End Floating WhatsApp & Back-to-Top -->
+
+	<!-- Scripts -->
+	<script src="/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+	<script src="/js/site.js"></script>
+	<!-- End Scripts -->
+
+</body>
+</html>

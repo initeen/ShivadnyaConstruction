@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="layout::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Our Services</title>
+</head>
+<body>
+
+	<!-- Services Section -->
+	<section class="container py-5">
+		<div class="text-center mb-4">
+			<h1 th:text="#{services.title}">Our Services</h1>
+			<p class="lead">From innovative residential projects to reliable
+				commercial solutions — we do it all.</p>
+		</div>
+
+		<div class="row align-items-center mb-5">
+			<div class="col-md-6">
+				<img src="/img/service.webp" class="img-fluid rounded shadow-sm"
+					alt="Our Services">
+			</div>
+			<div class="col-md-6">
+				<ul class="list-group list-group-flush fs-5">
+					<li class="list-group-item"><strong>•</strong> <span
+						th:text="#{services.rowhouses}">Row Houses</span></li>
+					<li class="list-group-item"><strong>•</strong> <span
+						th:text="#{services.flats}">Flats</span></li>
+					<li class="list-group-item"><strong>•</strong> <span
+						th:text="#{services.commercial}">Commercial Buildings</span></li>
+					<li class="list-group-item"><strong>•</strong> <span
+						th:text="#{services.renovation}">Renovation & Remodeling</span></li>
+					<li class="list-group-item"><strong>•</strong> <span
+						th:text="#{services.pm}">Project Management</span></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Why Choose Us -->
+		<div class="row text-center mb-1">
+			<div class="col-12 col-sm-6 col-md-4 mb-4">
+				<div
+					class="p-4 shadow-sm rounded bg-body-tertiary h-100 d-flex flex-column justify-content-between">
+					<i class="fa-solid fa-helmet-safety fa-2x text-primary mb-3"></i>
+					<h5>Expert Team</h5>
+					<p>Qualified professionals ensuring quality and compliance at
+						every step.</p>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-6 col-md-4 mb-4">
+				<div
+					class="p-4 shadow-sm rounded bg-body-tertiary h-100 d-flex flex-column justify-content-between">
+					<i class="fa-solid fa-clock fa-2x text-success mb-3"></i>
+					<h5>On-Time Delivery</h5>
+					<p>We commit and deliver within the promised timeline with
+						precision.</p>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-6 col-md-4 mb-4">
+				<div
+					class="p-4 shadow-sm rounded bg-body-tertiary h-100 d-flex flex-column justify-content-between">
+					<i class="fa-solid fa-sack-dollar fa-2x text-warning mb-3"></i>
+					<h5>Transparent Pricing</h5>
+					<p>No hidden charges. You get what you pay for with clear cost
+						breakdowns.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Call to Action -->
+		  <div class="text-center mt-2">
+            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#estimateModal">
+              Get Free Estimation
+            </button>
+        </div>
+	</section>
+
+	<!-- <section>
+		fragments/estimate-modal.html
+		<div class="modal fade" id="estimateModal" tabindex="-1"
+			aria-labelledby="estimateModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-md">
+				<div class="modal-content">
+					<form id="estimationForm">
+						<div class="modal-header">
+							<h5 class="modal-title" id="estimateModalLabel">Construction
+								Estimate</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal"
+								aria-label="Close"></button>
+						</div>
+
+						<div class="modal-body">
+							Step 1
+							<div class="step" id="step1">
+								<div class="mb-3">
+									<label for="workType" class="form-label">Type of Work</label> <select
+										class="form-select" id="workType" required>
+										<option disabled selected>Select</option>
+										<option>New Construction</option>
+										<option>Renovation</option>
+										<option>Commercial</option>
+										<option>Residential</option>
+									</select>
+								</div>
+							</div>
+
+							Step 2
+							<div class="step d-none" id="step2">
+								<div class="mb-3">
+									<label for="area" class="form-label">Total Area (in sq
+										ft)</label> <input type="number" class="form-control" id="area"
+										required>
+								</div>
+							</div>
+
+							Step 3
+							<div class="step d-none" id="step3">
+								<div class="mb-3">
+									<label for="material" class="form-label">Preferred
+										Material</label> <select class="form-select" id="material" required>
+										<option disabled selected>Select</option>
+										<option>Standard</option>
+										<option>Premium</option>
+										<option>Luxury</option>
+									</select>
+								</div>
+							</div>
+
+							Step 4
+							<div class="step d-none" id="step4">
+								<div class="mb-3">
+									<label for="quality" class="form-label">Construction
+										Quality</label> <select class="form-select" id="quality" required>
+										<option disabled selected>Select</option>
+										<option>Basic</option>
+										<option>Medium</option>
+										<option>High-end</option>
+									</select>
+								</div>
+							</div>
+
+							Step 5
+							<div class="step d-none" id="step5">
+								<div class="mb-3">
+									<label for="email" class="form-label">Your Email</label> <input
+										type="email" class="form-control" id="email" required>
+								</div>
+								<div class="mb-3">
+									<label for="notes" class="form-label">Additional Info</label>
+									<textarea class="form-control" id="notes" rows="3"></textarea>
+								</div>
+							</div>
+						</div>
+
+						<div class="modal-footer justify-content-end">
+							<button type="button" class="btn btn-secondary" id="prevBtn"
+								disabled>Back</button>
+							<button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+							<button type="submit" class="btn btn-success d-none"
+								id="submitBtn">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script>
+// Multi-step modal logic
+let currentStep = 0;
+const steps = document.querySelectorAll('.step');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const submitBtn = document.getElementById('submitBtn');
+
+function showStep(index) {
+  steps.forEach((step, i) => {
+    step.classList.toggle('d-none', i !== index);
+  });
+  prevBtn.disabled = index === 0;
+  nextBtn.classList.toggle('d-none', index === steps.length - 1);
+  submitBtn.classList.toggle('d-none', index !== steps.length - 1);
+}
+
+nextBtn.addEventListener('click', () => {
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    showStep(currentStep);
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentStep > 0) {
+    currentStep--;
+    showStep(currentStep);
+  }
+});
+
+document.getElementById('estimationForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  alert('Estimate submitted! (Backend logic goes here)');
+  // Reset modal
+  currentStep = 0;
+  showStep(currentStep);
+  const modal = bootstrap.Modal.getInstance(document.getElementById('estimateModal'));
+  modal.hide();
+});
+
+document.getElementById('estimateModal').addEventListener('shown.bs.modal', function () {
+  currentStep = 0;
+  showStep(currentStep);
+});
+</script>
+
+	</section> -->
+	
+	<section>
+	 <!-- Estimate Modal -->
+    <section>
+        <div class="modal fade" id="estimateModal" tabindex="-1"
+            aria-labelledby="estimateModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <form id="estimationForm">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="estimateModalLabel">Construction Estimate</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="mb-3">
+                              <div class="progress">
+                                <div id="estProgress" class="progress-bar" role="progressbar" style="width:20%">Step 1 of 5</div>
+                              </div>
+                            </div>
+
+                            <!-- Step 1 -->
+                            <div class="step" data-step="1">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="cityArea" class="form-label">City / Area</label>
+                                        <select id="cityArea" class="form-select">
+                                            <option value="m bad">Makhamalabad</option>
+                                            <option value="Panchvati">Panchavati</option>
+                                            <option value="Gangapur">Gangapur Road</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="plotRange" class="form-label">Plot Area</label>
+                                        <select id="plotRange" class="form-select">
+                                            <option value="above 500sq.ft">Above 500 sq.ft</option>
+                                            <option value="1000-2000sqft">1000-2000 sqft</option>
+                                            <option value="2000-3000sqft">2000-3000 sqft</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="slabRange" class="form-label">Slab Area</label>
+                                        <select id="slabRange" class="form-select">
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                            <option value="2000">2000</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 col-md-3">
+                                        <label for="floors" class="form-label">Floors</label>
+                                        <select id="floors" class="form-select">
+                                          <option value="1">1 (Ground)</option>
+                                          <option value="2">2 (G+1)</option>
+                                          <option value="3">3 (G+2)</option>
+                                          <option value="4">4 (G+3)</option>
+                                          <option value="5">5</option>
+                                          <option value="6">6</option>
+                                          <option value="7">7</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="workType" class="form-label">Type of Work</label>
+                                        <select id="workType" class="form-select">
+                                            <option>New Construction</option>
+                                            <option>Renovation</option>
+                                            <option>Commercial</option>
+                                            <option>Residential</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="step d-none" data-step="2">
+                                <div class="mb-3">
+                                    <div class="mb-2">Material Type</div>
+                                    <div class="d-flex gap-3">
+                                      <label class="card p-2 text-center"><img src="/img/material_standard.jpg" style="height:80px"><div><input type="radio" name="material" value="Standard" checked> Standard</div></label>
+                                      <label class="card p-2 text-center"><img src="/img/material_premium.jpg" style="height:80px"><div><input type="radio" name="material" value="Premium"> Premium</div></label>
+                                      <label class="card p-2 text-center"><img src="/img/material_luxury.jpg" style="height:80px"><div><input type="radio" name="material" value="Luxury"> Luxury</div></label>
+                                    </div>
+
+                                    <div class="mt-3">
+                                      <label for="quality" class="form-label">Quality</label>
+                                      <select id="quality" class="form-select">
+                                        <option>Basic</option>
+                                        <option>Medium</option>
+                                        <option>High-end</option>
+                                      </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="step d-none" data-step="3">
+                                <div class="row g-2">
+                                    <div class="col-md-3"><label>Doors</label><input id="doors" type="number" class="form-control" value="3"></div>
+                                    <div class="col-md-3"><label>Windows</label><input id="windows" type="number" class="form-control" value="8"></div>
+                                    <div class="col-md-3"><label>Paint area (sqft)</label><input id="paintArea" type="number" class="form-control" value="1000"></div>
+                                    <div class="col-md-3 align-self-end"><div class="form-check"><input id="includeConnections" class="form-check-input" type="checkbox" checked><label class="form-check-label">Include connections</label></div></div>
+                                </div>
+                            </div>
+
+                            <!-- Step 4 -->
+                            <div class="step d-none" data-step="4">
+                                <div class="row g-2">
+                                    <div class="col-md-4"><label>Name</label><input id="name" class="form-control" required></div>
+                                    <div class="col-md-4"><label>Email</label><input id="email" type="email" class="form-control" required></div>
+                                    <div class="col-md-4"><label>Phone</label><input id="phone" class="form-control"></div>
+                                </div>
+
+                                <div class="mt-3">
+                                  <label>Notes</label>
+                                  <textarea id="notes" class="form-control" rows="3"></textarea>
+                                </div>
+
+                                <div class="mt-3 bg-light p-3 rounded" id="previewBox">
+                                  <h6>Preview</h6>
+                                  <div id="previewContent">(Calculate to see preview)</div>
+                                </div>
+                            </div>
+
+                            <!-- Step 5 (confirmation) -->
+                            <div class="step d-none" data-step="5">
+                                <div class="text-center">
+                                    <h5>Ready to generate your estimate</h5>
+                                    <p>Click Submit & Generate — you'll get a PDF by email and admin will be notified.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer justify-content-end">
+                            <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Back</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+                            <button type="submit" class="btn btn-success d-none" id="submitBtn">Submit & Generate</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+  const steps = Array.from(document.querySelectorAll('.step'));
+  let cur = 0;
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const progress = document.getElementById('estProgress');
+
+  function showStep(i){
+    steps.forEach((s,idx)=> s.classList.toggle('d-none', idx!==i));
+    prevBtn.disabled = i===0;
+    nextBtn.classList.toggle('d-none', i===steps.length-1);
+    submitBtn.classList.toggle('d-none', i!==steps.length-1);
+    progress.style.width = `${((i+1)/steps.length)*100}%`;
+    progress.textContent = `Step ${i+1} of ${steps.length}`;
+    if(i===steps.length-2) updatePreview(); // show preview on step before final
+    if(i===steps.length-1) {
+      // final confirmation step, ensure preview up-to-date
+      updatePreview();
+    }
+  }
+
+  nextBtn.addEventListener('click', ()=>{ if(cur<steps.length-1){ cur++; showStep(cur); } });
+  prevBtn.addEventListener('click', ()=>{ if(cur>0){ cur--; showStep(cur); } });
+
+  function gather(){
+    const selections = {
+      doors: parseInt(document.getElementById('doors')?.value||0),
+      windows: parseInt(document.getElementById('windows')?.value||0),
+      paintArea: parseFloat(document.getElementById('paintArea')?.value||0)
+    };
+    const materialRadio = document.querySelector('input[name="material"]:checked');
+    return {
+      name: document.getElementById('name')?.value,
+      email: document.getElementById('email')?.value,
+      phone: document.getElementById('phone')?.value,
+      cityArea: document.getElementById('cityArea')?.value,
+      plotRange: document.getElementById('plotRange')?.value,
+      slabRange: document.getElementById('slabRange')?.value,
+      floors: parseInt(document.getElementById('floors')?.value||1),
+      workType: document.getElementById('workType')?.value,
+      material: materialRadio ? materialRadio.value : (document.getElementById('material') ? document.getElementById('material').value : 'Standard'),
+      quality: document.getElementById('quality')?.value,
+      selections, includeConnections: document.getElementById('includeConnections')?.checked,
+      notes: document.getElementById('notes')?.value
+    };
+  }
+
+  function updatePreview(){
+    const data = gather();
+    // simple client-side approx
+    const base = (data.material==='Premium'?2000:(data.material==='Luxury'?3000:1500));
+    const slab = (isNaN(parseFloat(data.slabRange))? (data.slabRange.includes('-')? (parseInt(data.slabRange.split('-')[0]) + parseInt(data.slabRange.split('-')[1]))/2 : 1000) : parseFloat(data.slabRange));
+    const structure = slab*base*(1 + (data.floors-1)*0.08);
+    const materials = data.selections.doors*4000 + data.selections.windows*2500 + data.selections.paintArea*25 + slab*80 + slab*120 + slab*30;
+    const labour = materials*0.18;
+    const mandatory = data.includeConnections ? (25000+30000+15000) : 0;
+    const subtotal = structure + materials + labour + mandatory;
+    const contingency = subtotal*0.05; const admin = 5000; const total = subtotal + contingency + admin;
+
+    const html = `<div><strong>Approx Total:</strong> ₹ ${Math.round(total).toLocaleString()}</div>
+      <div class="mt-2"><small>Structure: ₹ ${Math.round(structure).toLocaleString()}</small><br>
+      <small>Materials: ₹ ${Math.round(materials).toLocaleString()}</small><br>
+      <small>Labour: ₹ ${Math.round(labour).toLocaleString()}</small></div>
+    `;
+    const previewEl = document.getElementById('previewContent');
+    if(previewEl) previewEl.innerHTML = html;
+    return { total, structure, materials, labour };
+  }
+
+  // Submit
+  document.getElementById('estimationForm').addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    nextBtn.disabled = true; prevBtn.disabled = true; submitBtn.disabled = true;
+    const payload = gather();
+    // attach selections map
+    payload.selections = payload.selections || {};
+    try {
+      const res = await fetch('/api/estimates', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+      if(!res.ok) {
+        const text = await res.text();
+        throw new Error('Server error: ' + text);
+      }
+      const data = await res.json();
+      alert('Estimate generated: ₹ ' + Math.round(data.estimatedCost).toLocaleString() + '. Check your email.');
+      // WhatsApp share
+      const waText = encodeURIComponent(`I got an estimate from Shivadnya Construction: ₹ ${Math.round(data.estimatedCost).toLocaleString()} for ${payload.cityArea}. Check your email for details.`);
+      const waUrl = `https://wa.me/?text=${waText}`;
+      if(confirm('Open WhatsApp to share this estimate?')) window.open(waUrl, '_blank');
+      // close modal
+      const modalEl = document.getElementById('estimateModal');
+      if(modalEl) {
+        try {
+          const modal = bootstrap.Modal.getInstance(modalEl);
+          if(modal) modal.hide();
+        } catch(err){}
+      }
+    } catch (err) {
+      console.error(err); alert('Failed to create estimate: ' + err.message);
+    } finally {
+      nextBtn.disabled = false; prevBtn.disabled = false; submitBtn.disabled = false;
+    }
+  });
+
+  // show initial
+  showStep(cur);
+
+  // recompute preview on change when near final
+  document.querySelectorAll('#estimationForm input, #estimationForm select, #estimationForm textarea').forEach(el=> el.addEventListener('change', ()=>{ if(cur>=steps.length-2) updatePreview(); }));
+});
+        
+        </script>
+        
+	</section>
+</body>
+</html>
